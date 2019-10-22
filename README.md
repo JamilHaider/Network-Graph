@@ -1,5 +1,16 @@
 Netword graph creation library using react and d3.js. Inspired by [1]
 
+There are two set of similar building blocks for SVG and HTML components
+
+1. Component for Pan and Zoom
+2. Draggable Components 
+
+
+TODO
+====
+
+* CSS Transforms and SVG transforms use different origin so I may have to do some preprocessing to make them behave the same.
+
 
 1. https://github.com/cjrd/directed-graph-creator
 
