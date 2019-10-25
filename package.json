@@ -1,8 +1,24 @@
 {
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/dummy_mocks/styleMock.js",
+      "\\.(svg)$": "<rootDir>/dummy_mocks/fileMock.js"
+    }
+  },
+  "babel": {
+    "presets": ["@babel/env", "@babel/react"],
+    "env": {
+      "development": {  "plugins": ["@babel/plugin-transform-modules-commonjs"]   },
+      "test": {  
+        "plugins": ["@babel/plugin-transform-modules-commonjs", "@babel/plugin-transform-react-jsx"]   
+      }
+    }
+  },
   "name": "network-graph",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-jest": "^24.9.0",
     "d3": "^5.12.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -12,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -12,8 +12,16 @@ TODO
 * CSS Transforms and SVG transforms use different origin so I may have to do some preprocessing to make them behave the same.
 
 
+Notes
+=====
+
+* You need babel-jest if you want to get rid of errors on import statements. Also need to add additional settings in package.json to tell babel to use es2015 transform plugin in test[2]
+* To get Jest to skip svg and css files, addd jest key config in package.json and point the relevant file extensions to files that contains stubs only. 
+
+
 1. https://github.com/cjrd/directed-graph-creator
 
+2. https://stackoverflow.com/questions/35756479/does-jest-support-es6-import-export
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
