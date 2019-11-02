@@ -10,8 +10,8 @@ function PanZoomSVG(props){
   })
 
   return (
-    <div className="graph-container">
-      <svg className={"graph"} style={{background: "green",height: "-webkit-fill-available", width: "-webkit-fill-available"}}>
+    <div className="graph-container" style={{height: "500px", width: "500px", overflow: "hidden"}}>
+      <svg className={"graph"} style={{width: "inherit", height: "inherit"}}>
         { props.children }
       </svg>
     </div>

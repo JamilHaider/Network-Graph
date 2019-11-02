@@ -18,8 +18,8 @@ function PanZoom(props){
     }))
   })
   return (
-    <div className="graph-container" style={{overflow: "auto"}}>
-      <div className={"graph"} style={{background: "green",height: "500px", width: "500px"}}>
+    <div className="graph-container" style={{height: "500px", width: "500px", overflow: "hidden"}}>
+      <div className={"graph"} style={{"transform": "translate(0px, 0px) scale(1)"}}>
         {
           children          
         }
